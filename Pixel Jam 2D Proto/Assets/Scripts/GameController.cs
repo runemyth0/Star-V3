@@ -47,21 +47,23 @@ public class GameController : MonoBehaviour
 		}
 	}
 
-	void GameOver ()
+	void GameOver () // ALERT: Currently broken!
 	{
-		GameObject player = GameObject.FindWithTag ("Player");
-		PlayerController playerController = player.GetComponent<PlayerController>();
-		playerController.moveHorizontal = 0;
-		playerController.moveVertical = 0;
+		GameObject player = GameObject.FindWithTag ("Player"); // Find the player
+		PlayerController playerController = player.GetComponent<PlayerController>(); // Get the PlayerController script
+		playerController.moveHorizontal = 0; // Prevent movement in horizontal
+		playerController.moveVertical = 0; // and vertical
 	}
 
 	public void Takeoff ()
 	{
 		fuel -= fuelMax;
-		pause = true;
+		pause = true; // Pauses the countdown timer (see CountdownTimer script for more info)
 		leaveText.text = "Preparing for takeoff...";
 	}
 
+	// Creates and distributes the resource (Fuel) across the map
+	// Recommend range of 1000 or greater
 	void SpawnResources ()
 	{
 		for (int i = 0; i < resourceCount; i++)
@@ -70,10 +72,15 @@ public class GameController : MonoBehaviour
 		}
 	}
 
+	// Creates and distributes the selected detail across the map
+	// Recommend range of 2000 or greater
 	void SpawnDetails ()
 	{
+		DetailSelect detailSelect = GetComponent<DetailSelect>();
 		for (int i = 0; i < detailDensity; i++)
 		{
+			detailSelect.GenerateDetail ();
+			detail = detailSelect.selectedDetail;
 			Instantiate (detail, new Vector2 (Random.Range (-1.0f,1.0f) * (detailRange), Random.Range (-1.0f, 1.0f) * (detailRange)), Quaternion.identity, GameObject.FindWithTag ("DetailBin").transform);
 		}
 	}

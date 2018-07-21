@@ -1320,6 +1320,7 @@ GameObject:
   - component: {fileID: 1484684215}
   - component: {fileID: 1484684214}
   - component: {fileID: 1484684216}
+  - component: {fileID: 1484684217}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -1385,7 +1386,33 @@ MonoBehaviour:
   fuelCarryText: {fileID: 1067849091}
   leaveText: {fileID: 982445996}
   resource: {fileID: 1634558509321894, guid: 3cc0aa81a0c734c4ba746c8b2bbe8505, type: 2}
-  detail: {fileID: 0}
+  detail: {fileID: 1322043084121582, guid: 862beb11ad295dd4f878542aa40820e3, type: 2}
+--- !u!114 &1484684217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1484684213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec24d49d28c02744dba28c93fa2d475f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedDetail: {fileID: 0}
+  detailRock1: {fileID: 1540851672138202, guid: 58b3835983d7dd943aa33d1335f4d2dc,
+    type: 2}
+  detailRock2: {fileID: 1785787580584804, guid: 9aa6cd7e145ccbe4882efdd989798d7f,
+    type: 2}
+  detailRock3: {fileID: 1861963717245026, guid: b6f7e33bd6898154387d2600a873bb42,
+    type: 2}
+  detailRock4: {fileID: 1411537856712416, guid: 49d6b75647c641f4f9a41bfb78329c60,
+    type: 2}
+  detailRock5: {fileID: 1421364608404726, guid: 3433664ec90ee5b4daa0b2d164548f84,
+    type: 2}
+  detailRock6: {fileID: 1509491414139076, guid: afeb2453f6e27ae4287f26e5f894c1ad,
+    type: 2}
+  detailRock7: {fileID: 1322043084121582, guid: 862beb11ad295dd4f878542aa40820e3,
+    type: 2}
 --- !u!1 &1560470970
 GameObject:
   m_ObjectHideFlags: 0
