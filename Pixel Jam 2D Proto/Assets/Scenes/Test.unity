@@ -1385,7 +1385,7 @@ MonoBehaviour:
   fuelCarryText: {fileID: 1067849091}
   leaveText: {fileID: 982445996}
   resource: {fileID: 1634558509321894, guid: 3cc0aa81a0c734c4ba746c8b2bbe8505, type: 2}
-  detail: {fileID: 0}
+  detail: {fileID: 1322043084121582, guid: 862beb11ad295dd4f878542aa40820e3, type: 2}
 --- !u!1 &1560470970
 GameObject:
   m_ObjectHideFlags: 0
