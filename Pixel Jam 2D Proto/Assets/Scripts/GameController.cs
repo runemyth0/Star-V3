@@ -76,8 +76,11 @@ public class GameController : MonoBehaviour
 	// Recommend range of 2000 or greater
 	void SpawnDetails ()
 	{
+		DetailSelect detailSelect = GetComponent<DetailSelect>();
 		for (int i = 0; i < detailDensity; i++)
 		{
+			detailSelect.GenerateDetail ();
+			detail = detailSelect.selectedDetail;
 			Instantiate (detail, new Vector2 (Random.Range (-1.0f,1.0f) * (detailRange), Random.Range (-1.0f, 1.0f) * (detailRange)), Quaternion.identity, GameObject.FindWithTag ("DetailBin").transform);
 		}
 	}
