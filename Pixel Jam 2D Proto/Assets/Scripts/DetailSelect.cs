@@ -49,7 +49,7 @@ public class DetailSelect : MonoBehaviour
 				selectedDetail = detailRock7;
 				break;
 			default:
-				selectedDetail = null;
+				selectedDetail = detailRock1;
 				break;
 		}
 	}

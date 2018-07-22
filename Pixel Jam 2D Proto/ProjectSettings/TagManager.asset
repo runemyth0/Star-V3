@@ -61,3 +61,6 @@ TagManager:
   - name: Front Detail
     uniqueID: 2110859203
     locked: 0
+  - name: Game Over
+    uniqueID: 2358564741
+    locked: 0
