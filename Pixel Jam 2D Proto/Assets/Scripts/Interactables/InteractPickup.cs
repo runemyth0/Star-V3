@@ -17,7 +17,7 @@ public class InteractPickup : MonoBehaviour
 	{
 		pickupText.text = "";
 
-		fuelValue = Mathf.Floor (Random.Range (1, 20));
+		fuelValue = Mathf.Floor (Random.Range (5.0f, 20.99f));
 
 		if (controller == null)
 		{
