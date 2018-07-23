@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -29,7 +30,6 @@ public class GameController : MonoBehaviour
 	void Awake ()
 	{
 		leaveText.text = "";
-		fuel = 0;
 		fuelText.text = fuel + "/" + fuelMax;
 		fuelCarryText.text = fuelCount + "/" + fuelCarry;
 		SpawnResources ();
@@ -53,6 +53,7 @@ public class GameController : MonoBehaviour
 		PlayerController playerController = player.GetComponent<PlayerController>(); // Get the PlayerController script
 		playerController.moveHorizontal = 0; // Prevent movement in horizontal
 		playerController.moveVertical = 0; // and vertical
+		SceneManager.LoadScene ("Game Over", LoadSceneMode.Single);
 	}
 
 	public void Takeoff ()
@@ -60,6 +61,7 @@ public class GameController : MonoBehaviour
 		fuel -= fuelMax;
 		pause = true; // Pauses the countdown timer (see CountdownTimer script for more info)
 		leaveText.text = "Preparing for takeoff...";
+		SceneManager.LoadScene ("Game_Over", LoadSceneMode.Single);
 	}
 
 	// Creates and distributes the resource (Fuel) across the map

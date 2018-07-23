@@ -8,6 +8,8 @@ public class DetailSelect : MonoBehaviour
 
 	public GameObject selectedDetail;
 
+
+  // Rocks
 	[SerializeField] private GameObject detailRock1;
 	[SerializeField] private GameObject detailRock2;
 	[SerializeField] private GameObject detailRock3;
@@ -16,14 +18,21 @@ public class DetailSelect : MonoBehaviour
 	[SerializeField] private GameObject detailRock6;
 	[SerializeField] private GameObject detailRock7;
 
-	void Awake ()
+  // Plants
+  [SerializeField] private GameObject detailPlant1;
+  [SerializeField] private GameObject detailPlant2;
+  [SerializeField] private GameObject detailPlant3;
+  [SerializeField] private GameObject detailPlant4;
+  [SerializeField] private GameObject detailPlant5;
+
+  void Awake ()
 	{
 		GenerateDetail ();
 	}
 
 	public void GenerateDetail ()
 	{
-		detailValue = Mathf.RoundToInt (Random.Range (0.0f, 7.0f));
+		detailValue = Mathf.RoundToInt (Random.Range (1.0f, 12.0f));
 
 		switch (detailValue)
 		{
@@ -48,7 +57,22 @@ public class DetailSelect : MonoBehaviour
 			case 7:
 				selectedDetail = detailRock7;
 				break;
-			default:
+      case 8:
+        selectedDetail = detailPlant1;
+        break;
+      case 9:
+        selectedDetail = detailPlant2;
+        break;
+      case 10:
+        selectedDetail = detailPlant3;
+        break;
+      case 11:
+        selectedDetail = detailPlant4;
+        break;
+      case 12:
+        selectedDetail = detailPlant5;
+        break;
+      default:
 				selectedDetail = detailRock1;
 				break;
 		}

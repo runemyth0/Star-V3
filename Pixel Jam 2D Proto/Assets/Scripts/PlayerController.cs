@@ -24,6 +24,22 @@ public class PlayerController : MonoBehaviour
 
 		Vector3 movement = new Vector3 (moveHorizontal,moveVertical,0); // Creates a directional unit vector
 		transform.position += movement * speed; // Multiplies directional unit vector by speed and applies it to the player's transform
+			if (transform.position.x > 1250)
+			{
+				transform.position = new Vector3 (1250,transform.position.y,0);
+			}
+			else if (transform.position.x < -1250)
+			{
+				transform.position = new Vector3 (transform.position.x,1250,0);
+			}
+			if (transform.position.y > 1250)
+			{
+				transform.position = new Vector3 (-1250,transform.position.y,0);
+			}
+			else if (transform.position.y < -1250)
+			{
+				transform.position = new Vector3 (transform.position.x,-1250,0);
+			}
 		LeftCheck (); // Updates facing boolean
 	}
 
